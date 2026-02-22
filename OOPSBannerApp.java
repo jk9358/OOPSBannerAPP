@@ -1,12 +1,18 @@
+
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        // We use 7 lines to draw the letters O-O-P-S
-        System.out.println("  *** *** **** **** ");
-        System.out.println(" * * * * * * * ");
-        System.out.println(" * * * * * * * ");
-        System.out.println(" * * * * **** **** ");
-        System.out.println(" * * * * * *");
-        System.out.println(" * * * * * *");
-        System.out.println("  *** *** * **** ");
+        String[] bannerLines = {
+            String.join("", "  ***", " ***", " ****", " ****", " "),
+            String.join("", " *", "   *", " *", "   *", " *", "   *", " *", "   *"),
+            String.join("", " *", "   *", " *", "   *", " *", "   *", " *", "   *"),
+            String.join("", " *", "   *", " *", "   *", " ****", " ****", " "),
+            String.join("", " *", "   *", " *", "   *", " *", "    ", " ", "   "),
+            String.join("", " *", "   *", " *", "   *", " *", "    ", " ", "   "),
+            String.join("", "  ***", " ***", " *", "    ", " ****", " ")
+        };
+
+        for (String line : bannerLines) {
+            System.out.println(line);
+        }
     }
 }
