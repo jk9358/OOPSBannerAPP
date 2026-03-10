@@ -32,10 +32,3 @@ public class OOPSBannerApp {
     public static String getSMid1() { return "*    "; }
     public static String getSMid2() { return "    *"; }
 }
-Footer
-© 2026 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
