@@ -1,21 +1,41 @@
-public class BannerApp {
+public class OOPSBannerApp {
     public static void main(String[] args) {
-        String[][] banner = { getO(), getO(), getP(), getS() };
+        String[] banner = {
+                String.join(" ", "    ***    ", "    ***    ", " ******* ", "  ****** "),
+                String.join(" ", "  **   **  ", "  **   **  ", " **   ** ", " **    **"),
+				String.join(" ", " **     ** ", " **     ** ", " **   ** ", " **      "),
+				String.join(" ", " **     ** ", " **     ** ", " ******* ", "  ****** "),
+				String.join(" ", " **     ** ", " **     ** ", " **      ", "       **"),
+				String.join(" ", "  **   **  ", "  **   **  ", " **      ", " **    **"),
+				String.join(" ", "    ***    ", "    ***    ", " **      ", "  ****** "),
+            String.join("  ", getOTop(), getOTop(), getPTop(), getSTop()),
+            String.join("  ", getOMid(), getOMid(), getPMid(), getSMid1()),
+            String.join("  ", getOMid(), getOMid(), getPMid(), getSTop()),
+            String.join("  ", getOMid(), getOMid(), getPTop(), getSMid2()),
+            String.join("  ", getOMid(), getOMid(), getPFoot(), getSMid2()),
+            String.join("  ", getOMid(), getOMid(), getPFoot(), getSMid2()),
+            String.join("  ", getOTop(), getOTop(), getPFoot(), getSTop())
+        };
 
-        for (int i = 0; i < 7; i++) {
-            System.out.println(String.join("", banner[0][i], banner[1][i], banner[2][i], banner[3][i]));
+        for (String line : banner) {
+            System.out.println(line);
         }
     }
+    public static String getOTop() { return " *** "; }
+    public static String getOMid() { return "*   *"; }
 
-    public static String[] getO() {
-        return new String[] {" *** ", "* *", "* *", "* *", "* *", "* *", " *** "};
-    }
+    public static String getPTop() { return "**** "; }
+    public static String getPMid() { return "*   *"; }
+    public static String getPFoot() { return "*    "; }
 
-    public static String[] getP() {
-        return new String[] {"**** ", "* *", "**** ", "* ", "* ", "* ", "* "};
-    }
-
-    public static String[] getS() {
-        return new String[] {" **** ", "* *", " **** ", "     *", "* *", " **** "};
-    }
+    public static String getSTop() { return " ****"; }
+    public static String getSMid1() { return "*    "; }
+    public static String getSMid2() { return "    *"; }
 }
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
